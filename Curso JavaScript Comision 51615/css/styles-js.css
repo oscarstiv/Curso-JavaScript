@@ -1,0 +1,238 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+body {
+  background-color: #f4f4f4; }
+
+
+.ocultarContenido {
+  display: none;
+}
+
+.oculto{
+  display: none;
+}
+
+.introCompra{
+  margin: 40px 0px;
+}
+
+.formulario{
+  margin: 50px 0px;
+}
+
+.formulario h4{
+  color: #1279ef;
+}
+
+.formulario label{
+  color: #1b1b5c;
+}
+
+.buttonEnviarDatos{
+  outline: none;
+  border: none;
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: #33a79d;
+  color: #ffffff;
+  cursor: pointer;
+}
+.buttonDisable{
+  background-color: #838383;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+/* Nombre de la persona que registro */
+
+.nombrePersona{
+  color: #1279ef;
+  margin: 10px 0px 70px 0px;
+  font-family: "Rakkas", cursive;
+}
+
+.nombrePersona h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nombrePersona h3{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1b1b5c;
+}
+
+/* Seccion Boletas*/
+
+.boletas{
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.boletas .cadaBoleta{
+  background-color: #f4f4f4;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 0px 10px;
+}
+
+.boletas .cadaBoleta h3{ 
+  margin: 5px 0px;
+  color: #1279ef;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.boletas .cadaBoleta h3 span{ 
+  white-space: nowrap;
+  font-size: 2rem;
+}
+
+.boletas .cadaBoleta p{ 
+  margin: 25px 0px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1b1b5c;
+}
+
+.boletas .cadaBoleta button{
+  background: #33a79d;
+  color: #ffffff;
+  padding: 5px 30px;
+  border: 2px solid transparent;
+  border-radius: 13px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  transition: 0.3s;
+}
+
+.boletas .cadaBoleta button:hover{
+  transform: scale(1.1, 1.1);
+  background: #ffffff;
+  color: #33a79d;
+  padding: 5px 30px;
+  border: 2px solid #33a79d;
+  cursor: pointer;
+}
+
+
+/* Seccion Carrito de compras*/
+.carrito{
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.carrito h2{  
+  color: #1b1b5c;
+}
+
+.carrito ul{  
+  margin: 10px 0px;
+  padding: 0px 50px;
+}
+.carrito ul li{  
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: #1279ef;
+}
+
+.carrito p{
+  padding: 5px 10px;
+  border-top: 2px solid #1279ef;
+  background-color: #f4f4f4;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.carrito .botonesCarro{
+  display: flex;
+  justify-content: space-between;  
+}
+
+.carrito .botonesCarro .BtnVaciar{
+  background: #fff;
+  color: #33a79d;
+  padding: 5px 10px;
+  border: 2px solid #33a79d;
+  border-radius: 13px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  transition: 0.3s; 
+}
+
+.carrito .botonesCarro .BtnVaciar:hover{
+  transform: scale(1.1, 1.1);
+  background: #f4f4f4;
+}
+
+.carrito .botonesCarro .BtnComprar{
+  background: #1279ef;
+  color: #fff;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 13px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  transition: 0.3s; 
+}
+
+.carrito .botonesCarro .BtnComprar:hover{
+  background: #fff;
+  color: #1279ef;
+  border: 2px solid #1279ef;
+  transform: scale(1.1, 1.1);
+}
+
+/* -------------- */
+/* ----FOOTER---- */
+/* -------------- */
+footer {
+  background-color: #1b1b5c;
+  color: #ffffff;
+  padding: 30px 0px; }
+  footer ul {
+    padding-left: 0px; }
+    footer ul li {
+      list-style: none;
+      font-size: 1rem; }
+  footer .iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: end; }
+    footer .iconos p {
+      text-align: end;
+      margin-bottom: 0px;
+      font-size: 1rem; }
+    footer .iconos ul {
+      display: flex;
+      gap: 12px;
+      padding: 0%; }
+  footer .derechos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    footer .derechos img {
+      width: 15%; }
+    footer .derechos button {
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #33a79d;
+      padding: 5px 40px;
+      border-radius: 5px;
+      border: 1px solid transparent; }
+      footer .derechos button:hover {
+        color: #33a79d;
+        background-color: #ffffff;
+        border: 1px solid #33a79d; }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compre sus boletas</title> 
+
+    <link rel="stylesheet" href="../css/styles-js.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <main>
+        
+
+
+        <!--Seccion Formulario -->
+
+        <section class="container-fluid" style="display: block;" id="formularioPersona">
+            <div class="row justify-content-center formulario">
+                <div class="col-md-6">
+                    <form id="form">
+                        <h4 class="text-center">Por favor complete sus datos para continuar</h4>
+                        <div class="form-group">
+                            <label for="Nombre">Nombre:</label>
+                            <input type="text" class="form-control inputForm" id="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="Apellido">Apellido:</label>
+                            <input type="text" class="form-control inputForm" id="Apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="Identificacion">Tipo de identificación:</label>
+                            <select class="form-control" id="Identificacion">
+                                <option> </option>
+                                <option>Cédula de ciudadanía</option>
+                                <option>Pasaporte</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="NumeroIdentificacion">Número de identificación:</label>
+                            <input type="number" class="form-control inputForm" id="NumeroIdentificacion">
+                            <small id="mensajeAdd" class="form-text text-muted" style="display: none;">El número no debe exceder los 12 carácteres.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Correo electrónico:</label>
+                            <input type="email" class="form-control inputForm" id="Email">
+                        </div>
+                        <button type="submit" class="buttonEnviarDatos buttonDisable" id="EnviarDatos">Enviar datos</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!--Seccion boletas-->
+        <section class="container ocultarContenido" id="SeccionBoletas">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="text-center nombrePersona" id="resultado"></div>
+                    <div class="text-center">
+                        <img src="../images/titular-entradas.svg" alt="Titular entradas" class="img-fluid mx-auto" width="20%"> 
+                    </div>
+                    <div class="boletas" id="boletas">                    
+                        <div class="col-md-3 cadaBoleta">
+                            <h3>Gen Individual <span>1 Día </span></h3>
+                            <p>Precio: $82</p>
+                            <button class="agregar-carrito" data-nombre="Gen Individual 1 Día" data-precio="82">Agregar al carrito</button>
+                        </div>
+                        <div class="col-md-3 cadaBoleta">
+                            <h3>Gen Individual <span>3 Dias</span></h3>
+                            <p>Precio: $136</p>
+                            <button class="agregar-carrito" data-nombre="Gen Individual 3 Días" data-precio="136">Agregar al carrito</button>
+                        </div>
+                        <div class="col-md-3 cadaBoleta">
+                            <h3>VIP Individual <span>1 Día</span></h3>
+                            <p>Precio: $113</p>
+                            <button class="agregar-carrito" data-nombre="VIP Individual 1 Día" data-precio="113">Agregar al carrito</button>
+                        </div>
+                        <div class="col-md-3 cadaBoleta">
+                            <h3>VIP Individual <span>3 Dias</span></h3>
+                            <p>Precio: $209</p>
+                            <button class="agregar-carrito" data-nombre="VIP Individual 3 Días" data-precio="209">Agregar al carrito</button>
+                        </div>
+                    </div>                        
+                </div>
+                <div class="col-md-6 carrito">
+                    <h2>Carrito de compra</h2>
+                    <div id="carrito">
+                    <ul id="lista-carrito"></ul>
+                    <p id="total-carrito">Total: $0</p>
+                    <div class="botonesCarro">
+                        <button class="BtnVaciar" id="vaciar-carrito">Vaciar carrito</button>
+                        <button class="BtnComprar" id="comprar-carrito">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-2">
+                        <ul>
+                            <li>
+                                Prensa
+                            </li>
+                            <li>
+                                Sponsors
+                            </li>
+                            <li>
+                                Merch
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <ul>
+                            <li>
+                                Información
+                            </li>
+                            <li>
+                                Contacto
+                            </li>
+                            <li>
+                                Politicas de privacidad
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="offset-lg-6 col-lg-2 offset-md-4 col-md-3 iconos">
+                        <p>Siguenos en:</p>
+                        <ul>
+                            <li class="text-center">
+                                <a href="https://es-la.facebook.com/" target="_blank">
+                                    <img src="../images/icono-facebook.png" alt="Icono Facebook" class="img-fluid mx-auto">
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <a href="https://twitter.com/?lang=es" target="_blank">
+                                    <img src="../images/icono-twitter.png" alt="Icono Twitter" class="img-fluid mx-auto">
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img src="../images/icono-instagram.png" alt="Icono Instagram" class="img-fluid mx-auto">
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <a href="https://www.youtube.com/" target="_blank">
+                                    <img src="../images/icono-youtube.png" alt="Icono Youtube" class="img-fluid mx-auto">
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <a href="https://www.tiktok.com/es/" target="_blank">
+                                    <img src="../images/icono-tiktok.png" alt="Icono Tiktok" class="img-fluid mx-auto">
+                                </a>
+                            </li>
+                            <li class="text-center">
+                                <a href="https://open.spotify.com/" target="_blank">
+                                    <img src="../images/icono-spotify.png" alt="Icono Spotify" class="img-fluid mx-auto">
+                                </a>
+                            </li>
+                        </ul>                        
+                    </div>
+                </div>
+                <hr>
+                <div class="derechos">
+                    <img src="../images/titular-festival.svg" alt="Imagen marca de festival footer">
+                    <button>
+                        Newlestter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <script src="../js/js.js"></script>
+
+
+</body>
+</html>
